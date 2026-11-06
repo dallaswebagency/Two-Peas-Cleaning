@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Two Peas Cleaning | Move-Out Cleaning in Calgary</title>
+<meta name="description" content="Two Peas Cleaning Company Inc. Move-out, property management and detailed residential cleaning in Calgary. Open Monday to Sunday, 8 AM to 5 PM. Call 587-969-7327.">
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pod:#2E7D32; --pod-deep:#173F1D; --pea:#7CC142; --pea-soft:#E7F4D8;
+  --sky:#1FA2DE; --sky-soft:#E3F3FB; --cream:#FBF9F1; --paper:#FFFFFF;
+  --ink:#16251A; --muted:#5B6B5E; --line:#DCE5D3;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Figtree',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:'Bricolage Grotesque',sans-serif;line-height:1.05;letter-spacing:-.02em}
+.wrap{width:min(1240px,92%);margin:0 auto}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--pod)}
+.eyebrow::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--pea);box-shadow:16px 0 0 var(--pea)}
+.eyebrow{padding-left:0}
+.eyebrow span{margin-left:16px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:700;font-size:.98rem;border:0;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s;font-family:inherit}
+.btn-pod{background:var(--pod);color:#fff}
+.btn-pod:hover{background:var(--pod-deep);transform:translateY(-2px)}
+.btn-sky{background:var(--sky);color:#fff}
+.btn-sky:hover{background:#1689BE;transform:translateY(-2px)}
+.btn-line{border:2px solid currentColor;background:transparent}
+
+/* ---------- top bar ---------- */
+.topbar{background:var(--pod-deep);color:#CFE6C4;font-size:.84rem}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:9px 0;gap:16px;flex-wrap:wrap}
+.topbar a{color:#fff;font-weight:600}
+.topbar .tb-right{display:flex;gap:22px}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(251,249,241,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0;gap:20px}
+.logo img{height:84px;width:auto}
+.menu{display:flex;gap:28px;font-weight:600;font-size:.95rem}
+.menu a{position:relative;padding:4px 0}
+.menu a::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--pea);transition:width .25s}
+.menu a:hover::after,.menu a.on::after{width:100%}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.nav-phone{font-weight:700;color:var(--pod)}
+.burger{display:none;background:none;border:0;width:42px;height:42px;cursor:pointer}
+.burger span{display:block;height:2px;background:var(--ink);margin:7px 8px;border-radius:2px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;background:#fff}
+.hero-bg{position:absolute;inset:0;background:url(images/hero-team.jpg) right center/cover no-repeat}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.96) 34%,rgba(255,255,255,.55) 58%,rgba(255,255,255,0) 78%)}
+.hero-inner{position:relative;padding:86px 0 150px;max-width:640px}
+.hero h1{font-size:clamp(2.6rem,5.6vw,4.7rem);font-weight:800;margin:18px 0 22px}
+.hero h1 em{font-style:normal;color:var(--pod);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.22em;background:var(--pea);opacity:.35;z-index:-1;border-radius:4px}
+.hero p.lead{font-size:1.15rem;color:var(--muted);max-width:520px}
+.hero-times{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.chip{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 16px 9px 10px;font-size:.9rem;font-weight:600;box-shadow:0 6px 18px rgba(23,63,29,.06)}
+.chip b{background:var(--pea-soft);color:var(--pod);border-radius:999px;padding:3px 10px;font-size:.82rem}
+
+/* booking bar */
+.booking{position:relative;z-index:5;margin-top:-92px}
+.booking form{background:var(--paper);border-radius:24px;box-shadow:0 30px 60px -20px rgba(23,63,29,.28);display:grid;grid-template-columns:1.1fr 1fr 1fr 1fr auto;gap:0;overflow:hidden;border:1px solid var(--line)}
+.bk-head{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;padding:16px 26px;background:var(--pod);color:#fff;font-weight:600;font-size:.95rem;gap:12px;flex-wrap:wrap}
+.bk-head strong{font-family:'Bricolage Grotesque',sans-serif;font-size:1.15rem}
+.field{padding:16px 22px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:4px}
+.field label{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.field input,.field select{border:0;background:transparent;font:600 1rem 'Figtree';color:var(--ink);outline:none;padding:4px 0;width:100%}
+.booking .btn{border-radius:0;padding:0 34px;font-size:1rem;height:100%}
+.bk-note{padding:14px 26px;grid-column:1/-1;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted);display:flex;gap:22px;flex-wrap:wrap}
+.bk-note a{color:var(--pod);font-weight:700}
+
+/* ---------- proof ---------- */
+.proof{padding:56px 0 30px}
+.proof-row{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.proof-item{padding:26px 24px;display:flex;align-items:center;gap:16px;border-right:1px solid var(--line)}
+.proof-item:last-child{border-right:0}
+.proof-item img{height:38px;width:auto}
+.proof-item .big{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.6rem;color:var(--pod);line-height:1}
+.proof-item small{display:block;color:var(--muted);font-size:.85rem;line-height:1.35}
+.stars{color:#F5B400;letter-spacing:2px;font-size:1rem}
+
+/* ---------- checklist ---------- */
+.check{padding:90px 0}
+.check-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:start}
+.check-side{position:sticky;top:120px}
+.check-side h2{font-size:clamp(2.1rem,3.8vw,3.2rem);margin:16px 0 18px}
+.check-side p{color:var(--muted);max-width:430px}
+.check-photo{margin-top:30px;position:relative;width:78%}
+.check-photo img{border-radius:var(--r);aspect-ratio:3/4;object-fit:cover;width:100%}
+.check-photo .tag{position:absolute;right:-22%;bottom:28px;background:var(--sky);color:#fff;border-radius:14px;padding:14px 18px;font-weight:700;font-size:.9rem;max-width:200px;box-shadow:0 16px 30px -10px rgba(31,162,222,.5)}
+.sheet{background:var(--paper);border:1px solid var(--line);border-radius:26px;overflow:hidden;box-shadow:0 20px 50px -30px rgba(23,63,29,.35)}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)}
+.tab{background:none;border:0;padding:20px 18px;text-align:left;cursor:pointer;font-family:inherit;border-right:1px solid var(--line);transition:background .2s;position:relative}
+.tab:last-child{border-right:0}
+.tab .n{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:.85rem;color:var(--muted)}
+.tab .t{display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1.25rem;color:var(--ink)}
+.tab.on{background:var(--pea-soft)}
+.tab.on::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--pod)}
+.tab.on .n{color:var(--pod)}
+.sheet-body{padding:28px 30px 30px}
+.prog{display:flex;align-items:center;gap:16px;margin-bottom:22px}
+.bar{flex:1;height:8px;background:var(--line);border-radius:9px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--pea),var(--pod));border-radius:9px;transition:width .2s}
+.prog span{font-weight:700;font-size:.9rem;color:var(--pod);min-width:84px;text-align:right}
+.list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:4px 26px}
+.list li{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-bottom:1px dashed var(--line);font-weight:500;opacity:.35;transition:opacity .3s}
+.list li.done{opacity:1}
+.box{flex:0 0 22px;height:22px;border-radius:7px;border:2px solid var(--line);display:grid;place-items:center;transition:all .25s;margin-top:1px}
+.list li.done .box{background:var(--pod);border-color:var(--pod)}
+.box svg{width:13px;height:13px;stroke:#fff;stroke-width:3;fill:none;stroke-dasharray:20;stroke-dashoffset:20;transition:stroke-dashoffset .3s}
+.list li.done .box svg{stroke-dashoffset:0}
+.sheet-foot{display:flex;justify-content:space-between;align-items:center;margin-top:24px;gap:16px;flex-wrap:wrap}
+.sheet-foot p{font-size:.9rem;color:var(--muted)}
+
+/* ---------- hotspots ---------- */
+.spots{padding:30px 0 100px}
+.spots-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:34px;flex-wrap:wrap}
+.spots-head h2{font-size:clamp(2rem,3.6vw,3rem);max-width:640px;margin-top:14px}
+.spots-head p{max-width:380px;color:var(--muted)}
+.spot-stage{display:grid;grid-template-columns:1.6fr .9fr;gap:0;background:var(--pod-deep);border-radius:28px;overflow:hidden}
+.spot-img{position:relative;min-height:440px}
+.spot-img img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.pin{position:absolute;width:38px;height:38px;border-radius:50%;background:var(--pea);color:var(--pod-deep);font-weight:800;display:grid;place-items:center;border:3px solid #fff;cursor:pointer;transform:translate(-50%,-50%);transition:transform .2s,background .2s;font-family:'Bricolage Grotesque',sans-serif}
+.pin::before{content:"";position:absolute;inset:-9px;border-radius:50%;border:2px solid rgba(255,255,255,.7);animation:pulse 2.2s infinite}
+.pin.on,.pin:hover{background:var(--sky);color:#fff;transform:translate(-50%,-50%) scale(1.12)}
+@keyframes pulse{0%{transform:scale(.8);opacity:1}100%{transform:scale(1.5);opacity:0}}
+.spot-list{list-style:none;padding:34px 34px;color:#D8EAD0;counter-reset:s}
+.spot-list li{padding:15px 0;border-bottom:1px solid rgba(255,255,255,.12);display:flex;gap:16px;cursor:pointer;transition:color .2s}
+.spot-list li b{font-family:'Bricolage Grotesque',sans-serif;color:var(--pea);min-width:26px}
+.spot-list li.on{color:#fff}
+.spot-list li.on b{color:var(--sky)}
+.spot-list h4{font-size:1.08rem;font-weight:600;letter-spacing:0;font-family:'Figtree'}
+.spot-list small{display:block;font-size:.86rem;opacity:.75;max-height:0;overflow:hidden;transition:max-height .3s}
+.spot-list li.on small{max-height:80px;margin-top:4px}
+
+/* ---------- time ---------- */
+.time{padding:100px 0;background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.time-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}
+.time h2{font-size:clamp(2rem,3.6vw,3rem);margin:14px 0 18px}
+.time p{color:var(--muted)}
+.ruler{position:relative;padding-top:10px}
+.ticks{display:grid;grid-template-columns:repeat(11,1fr);font-size:.78rem;color:var(--muted);font-weight:600;margin-bottom:10px}
+.ticks span{border-left:1px solid var(--line);padding-left:6px;height:26px}
+.trow{margin:18px 0 26px}
+.trow .lbl{display:flex;justify-content:space-between;font-weight:700;margin-bottom:10px}
+.trow .lbl em{font-style:normal;font-family:'Bricolage Grotesque',sans-serif;font-size:1.7rem;color:var(--pod)}
+.track{position:relative;height:54px;background:repeating-linear-gradient(90deg,var(--cream) 0 calc(10% - 1px),var(--line) calc(10% - 1px) 10%);border-radius:14px}
+.fill{position:absolute;top:0;bottom:0;border-radius:14px;display:flex;align-items:center;padding:0 16px;color:#fff;font-weight:700;font-size:.9rem;transform-origin:left;transform:scaleX(0);transition:transform 1.1s cubic-bezier(.2,.8,.2,1)}
+.fill.house{left:60%;width:40%;background:linear-gradient(90deg,var(--pea),var(--pod))}
+.fill.apt{left:40%;width:20%;background:linear-gradient(90deg,#5CC3EE,var(--sky))}
+.ruler.in .fill{transform:scaleX(1)}
+.factors{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+.factors span{background:var(--pea-soft);color:var(--pod-deep);padding:8px 14px;border-radius:999px;font-size:.88rem;font-weight:600}
+
+/* ---------- oven note ---------- */
+.note-wrap{padding:70px 0 0}
+.note{display:grid;grid-template-columns:auto 1fr auto;gap:30px;align-items:center;background:var(--sky-soft);border:2px dashed #9BD3EE;border-radius:22px;padding:28px 34px}
+.note .ico{width:66px;height:66px;border-radius:18px;background:var(--sky);display:grid;place-items:center}
+.note .ico svg{width:34px;height:34px;stroke:#fff;fill:none;stroke-width:1.8}
+.note h3{font-size:1.45rem;margin-bottom:4px}
+.note p{color:var(--muted)}
+
+/* ---------- property managers ---------- */
+.pm{padding:100px 0}
+.pm-box{display:grid;grid-template-columns:1fr 1fr;background:var(--pod);color:#fff;border-radius:30px;overflow:hidden;position:relative}
+.pm-text{padding:64px 56px;position:relative;z-index:2}
+.pm-text .eyebrow{color:#CFF0B4}
+.pm-text .eyebrow::before{background:#CFF0B4;box-shadow:16px 0 0 #CFF0B4}
+.pm h2{font-size:clamp(2.1rem,3.8vw,3.2rem);margin:16px 0 18px}
+.pm-text p{color:#DDF0D4;max-width:460px}
+.pm-cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:30px 0 32px;max-width:380px}
+.pm-cal i{aspect-ratio:1;border-radius:8px;background:rgba(255,255,255,.1);font-style:normal;font-size:.72rem;display:grid;place-items:center;color:#BFE0B2}
+.pm-cal i.hot{background:var(--pea);color:var(--pod-deep);font-weight:800}
+.pm-img{position:relative;min-height:420px}
+.pm-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:polygon(14% 0,100% 0,100% 100%,0 100%)}
+
+/* ---------- services index ---------- */
+.svc{padding:20px 0 100px}
+.svc-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:26px;gap:30px;flex-wrap:wrap}
+.svc-head h2{font-size:clamp(2rem,3.6vw,3rem);margin-top:14px}
+.svc-wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:50px;align-items:center}
+.rows{border-top:2px solid var(--ink)}
+.row{display:grid;grid-template-columns:70px 1fr auto;align-items:center;padding:24px 6px;border-bottom:1px solid var(--line);transition:padding .25s,background .25s;cursor:pointer}
+.row .num{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;color:var(--muted)}
+.row h3{font-size:clamp(1.4rem,2.4vw,2rem);font-weight:600}
+.row .arr{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;transition:all .25s}
+.row:hover,.row.on{padding-left:20px;background:var(--pea-soft)}
+.row:hover .arr,.row.on .arr{background:var(--pod);border-color:var(--pod);color:#fff;transform:rotate(-45deg)}
+.row.on .num{color:var(--pod)}
+.svc-view{position:relative;aspect-ratio:4/3;border-radius:24px;overflow:hidden;box-shadow:0 30px 50px -25px rgba(23,63,29,.45)}
+.svc-view img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s,transform .8s;transform:scale(1.05)}
+.svc-view img.on{opacity:1;transform:scale(1)}
+
+/* ---------- owners ---------- */
+.owners{padding:100px 0;background:var(--pea-soft);position:relative;overflow:hidden}
+.owners-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.own-photo{position:relative;padding:0 0 30px 30px}
+.own-photo::before{content:"";position:absolute;left:0;bottom:0;width:62%;height:70%;background:var(--pea);border-radius:24px}
+.own-photo img{position:relative;border-radius:24px;aspect-ratio:4/3;object-fit:cover;width:100%;border:8px solid #fff;box-shadow:0 20px 40px -20px rgba(0,0,0,.3)}
+.own-photo .peas{position:absolute;right:-10px;top:-18px;display:flex;gap:6px}
+.own-photo .peas i{width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#B9E58D,var(--pea) 55%,#4E9A2B);box-shadow:0 6px 12px rgba(46,125,50,.35)}
+.owners h2{font-size:clamp(2.2rem,4vw,3.4rem);margin:14px 0 20px}
+.owners p{color:var(--muted);font-size:1.06rem;margin-bottom:14px}
+.own-links{display:flex;gap:14px;margin-top:26px;flex-wrap:wrap}
+
+/* ---------- final ---------- */
+.final{padding:100px 0}
+.final-box{display:grid;grid-template-columns:1.1fr .9fr;gap:0;border-radius:30px;overflow:hidden;background:var(--paper);border:1px solid var(--line)}
+.final-l{padding:60px 56px;background:var(--ink);color:#fff;position:relative}
+.final-l h2{font-size:clamp(2.2rem,4vw,3.4rem);margin:16px 0 18px}
+.final-l .eyebrow{color:var(--pea)}
+.final-l p{color:#B9C9BC;max-width:440px}
+.final-l .btns{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+.final-l .btn-line{color:#fff}
+.final-r{padding:50px 46px;display:flex;flex-direction:column;gap:22px;justify-content:center}
+.ci{display:flex;gap:16px;align-items:flex-start}
+.ci .ic{flex:0 0 46px;height:46px;border-radius:14px;background:var(--pea-soft);display:grid;place-items:center}
+.ci .ic svg{width:22px;height:22px;stroke:var(--pod);fill:none;stroke-width:2}
+.ci small{display:block;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.ci strong{font-size:1.1rem}
+
+/* ---------- footer ---------- */
+footer{background:var(--pod-deep);color:#BFD6B8;padding:70px 0 0;font-size:.95rem}
+.f-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:44px}
+.f-logo{background:#fff;border-radius:16px;padding:12px 16px;display:inline-block}
+.f-logo img{height:64px}
+footer h4{color:#fff;font-size:1.05rem;margin-bottom:16px;font-family:'Figtree';font-weight:700;letter-spacing:0}
+footer ul{list-style:none;display:grid;gap:9px}
+footer a:hover{color:#fff}
+.f-about p{margin-top:18px;max-width:300px}
+.f-seal{margin-top:18px;background:#fff;border-radius:10px;padding:8px 12px;display:inline-block}
+.f-seal img{height:44px}
+.news{display:flex;margin-top:10px;background:rgba(255,255,255,.08);border-radius:999px;padding:5px}
+.news input{flex:1;background:transparent;border:0;color:#fff;padding:0 14px;font:inherit;outline:none;min-width:0}
+.news input::placeholder{color:#8FAE88}
+.news button{background:var(--pea);color:var(--pod-deep);border:0;border-radius:999px;padding:10px 18px;font-weight:700;cursor:pointer;font-family:inherit}
+.socials{display:flex;gap:10px;margin-top:18px}
+.socials a{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.1);display:grid;place-items:center}
+.socials svg{width:18px;height:18px;fill:#fff}
+.f-bottom{margin-top:56px;border-top:1px solid rgba(255,255,255,.12);padding:22px 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.86rem}
+.f-bottom a{color:var(--pea);font-weight:600}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .menu{display:none}
+  .burger{display:block}
+  .menu.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--cream);padding:20px 4%;gap:14px;border-bottom:1px solid var(--line)}
+  .booking form{grid-template-columns:1fr 1fr}
+  .field:nth-of-type(2n){border-right:0}
+  .field{border-bottom:1px solid var(--line)}
+  .booking .btn{grid-column:1/-1;padding:18px;justify-content:center}
+  .proof-row{grid-template-columns:1fr 1fr}
+  .proof-item:nth-child(2){border-right:0}
+  .proof-item:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .check-grid,.time-grid,.owners-grid,.svc-wrap{grid-template-columns:1fr;gap:44px}
+  .check-side{position:static}
+  .spot-stage,.pm-box,.final-box{grid-template-columns:1fr}
+  .spot-img{min-height:0;aspect-ratio:16/9}
+  .pm-img{min-height:0;aspect-ratio:16/9}
+  .pm-img img{clip-path:none}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .nav-phone,.topbar .tb-left{display:none}
+  .logo img{height:58px}
+  .nav-cta .btn-pod{display:none}
+  .hero-bg{background-position:72% center;opacity:.35}
+  .hero-inner{padding:56px 0 120px}
+  .booking form{grid-template-columns:1fr}
+  .field{border-right:0}
+  .list{grid-template-columns:1fr}
+  .tab{padding:14px 12px}.tab .t{font-size:1.02rem}
+  .check-photo{width:100%}.check-photo .tag{right:12px}
+  .note{grid-template-columns:1fr;text-align:left}
+  .pm-text,.final-l,.final-r{padding:40px 26px}
+  .row{grid-template-columns:44px 1fr auto}
+  .svc-view{display:none}
+  .proof-row{grid-template-columns:1fr}
+  .proof-item{border-right:0;border-bottom:1px solid var(--line)}
+  .f-grid{grid-template-columns:1fr}
+  .spot-list{padding:22px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-left">Open Monday to Sunday, 8 AM to 5 PM. Weekend cleaning available.</div>
+    <div class="tb-right">
+      <a href="mailto:info@twopeascleaning.com">info@twopeascleaning.com</a>
+      <a href="https://clienthub.getjobber.com/" target="_blank" rel="noopener">Client Login</a>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo"><img src="images/logo.png" alt="Two Peas Cleaning Company Inc"></a>
+    <nav class="menu" id="menu">
+      <a href="#" class="on">Home</a>
+      <a href="https://www.twopeascleaning.com/about-us/">About Us</a>
+      <a href="#services">Services</a>
+      <a href="https://www.twopeascleaning.com/hiring/">Hiring</a>
+      <a href="https://www.twopeascleaning.com/testimonials/">Testimonials</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:5879697327" class="nav-phone">587-969-7327</a>
+      <a href="#book" class="btn btn-pod">Book Appointment</a>
+      <button class="burger" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="eyebrow"><span>Move-Out Cleaning in Calgary</span></div>
+      <h1>Hand back the keys to a <em>spotless</em> home.</h1>
+      <p class="lead">Move-out, property management and detailed residential cleaning. We pull out the fridge and stove, clean the oven inside and leave every room ready for the next walkthrough.</p>
+      <div class="hero-times">
+        <div class="chip"><b>House</b> About 6 to 10 hours</div>
+        <div class="chip"><b>Apartment</b> About 4 to 6 hours</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap booking" id="book">
+  <form onsubmit="event.preventDefault();this.querySelector('.bk-done').hidden=false;">
+    <div class="bk-head"><strong>Request your estimate</strong><span>Competitive, affordable rates. We reply with a quote for your home.</span></div>
+    <div class="field">
+      <label for="f-svc">Service</label>
+      <select id="f-svc">
+        <option>Move-Out Cleaning</option>
+        <option>House Cleaning</option>
+        <option>Office Cleaning</option>
+        <option>Professional Carpet Cleaning</option>
+        <option>Airbnb Cleaning</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="f-prop">Property</label>
+      <select id="f-prop"><option>House</option><option>Apartment</option><option>Property management unit</option></select>
+    </div>
+    <div class="field">
+      <label for="f-date">Preferred date</label>
+      <input id="f-date" type="date">
+    </div>
+    <div class="field">
+      <label for="f-ph">Your phone</label>
+      <input id="f-ph" type="tel" placeholder="587-000-0000" required>
+    </div>
+    <button class="btn btn-sky" type="submit">Get my estimate &rarr;</button>
+    <div class="bk-note">
+      <span class="bk-done" hidden style="color:var(--pod);font-weight:700">Thanks! We'll be in touch shortly.</span>
+      <span>Prefer to talk? <a href="tel:5879697327">587-969-7327</a></span>
+      <span>Or email <a href="mailto:info@twopeascleaning.com">info@twopeascleaning.com</a></span>
+    </div>
+  </form>
+</div>
+
+<section class="proof">
+  <div class="wrap proof-row rv">
+    <div class="proof-item"><img src="images/google.svg" alt="Google"><div><span class="stars">★★★★★</span><small>5-star reviews from Calgary clients on Google</small></div></div>
+    <div class="proof-item"><img src="images/bbb-seal.png" alt="BBB Accredited Business" style="height:44px"><div><small>Accredited Business</small></div></div>
+    <div class="proof-item"><div class="big">7 days</div><small>Monday to Sunday<br>8 AM to 5 PM</small></div>
+    <div class="proof-item"><div class="big">2</div><small>Peas in a pod. Owner-run by Nicole and Kendra</small></div>
+  </div>
+</section>
+
+<section class="check" id="checklist">
+  <div class="wrap check-grid">
+    <div class="check-side rv">
+      <div class="eyebrow"><span>The Move-Out Checklist</span></div>
+      <h2>Every room, ticked off before you go.</h2>
+      <p>This is the full list our team works through on a move-out clean. Pick a room to see what gets done.</p>
+      <div class="check-photo">
+        <img src="images/checklist-bath.jpg" alt="Bathroom being cleaned during a move-out clean">
+        <div class="tag">Behind the washer and dryer too</div>
+      </div>
+    </div>
+
+    <div class="sheet rv">
+      <div class="tabs" role="tablist">
+        <button class="tab on" data-room="kitchen"><span class="n">01</span><span class="t">Kitchen</span></button>
+        <button class="tab" data-room="bath"><span class="n">02</span><span class="t">Bathroom</span></button>
+        <button class="tab" data-room="living"><span class="n">03</span><span class="t">Living Areas</span></button>
+      </div>
+      <div class="sheet-body">
+        <div class="prog"><div class="bar"><i id="pbar"></i></div><span id="pcount">0 of 0</span></div>
+        <ul class="list" id="clist"></ul>
+        <div class="sheet-foot">
+          <p>Laundry area included if you're staying in the home.</p>
+          <a href="#book" class="btn btn-pod">Book this clean</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="spots">
+  <div class="wrap">
+    <div class="spots-head rv">
+      <div>
+        <div class="eyebrow"><span>The Details</span></div>
+        <h2>We move it, reach it and clean behind it.</h2>
+      </div>
+      <p>The spots most cleans skip are the ones landlords check first. Tap a number to see what we cover.</p>
+    </div>
+    <div class="spot-stage rv">
+      <div class="spot-img" id="spotImg">
+        <img src="images/kitchen-detail.jpg" alt="Kitchen with fridge and stove pulled out for move-out cleaning">
+        <button class="pin" style="left:20%;top:52%" data-i="0">1</button>
+        <button class="pin" style="left:50%;top:62%" data-i="1">2</button>
+        <button class="pin" style="left:57%;top:76%" data-i="2">3</button>
+        <button class="pin" style="left:72%;top:24%" data-i="3">4</button>
+        <button class="pin" style="left:38%;top:18%" data-i="4">5</button>
+        <button class="pin" style="left:88%;top:50%" data-i="5">6</button>
+      </div>
+      <ul class="spot-list" id="spotList">
+        <li data-i="0"><b>1</b><div><h4>Full fridge clean</h4><small>Inside and out, shelves and drawers included.</small></div></li>
+        <li data-i="1"><b>2</b><div><h4>Fridge and stove moved</h4><small>We pull appliances out and clean the floor and walls behind them.</small></div></li>
+        <li data-i="2"><b>3</b><div><h4>Oven cleaned inside</h4><small>Range, hood, filter and fan too.</small></div></li>
+        <li data-i="3"><b>4</b><div><h4>Cabinets, drawers and doors</h4><small>Inside and out, top to bottom.</small></div></li>
+        <li data-i="4"><b>5</b><div><h4>Walls and light fixtures</h4><small>Dusting, cobweb removal and fixtures wiped.</small></div></li>
+        <li data-i="5"><b>6</b><div><h4>Doors and frames</h4><small>Door knobs, frames and baseboards in every room.</small></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="time">
+  <div class="wrap time-grid">
+    <div class="rv">
+      <div class="eyebrow"><span>How Long It Takes</span></div>
+      <h2>Plan your move-out day with real numbers.</h2>
+      <p>A move-out clean is a full day's job done right. Here's what to expect, depending on the size and condition of the home and any debris or garbage left behind.</p>
+      <div class="factors" style="margin-top:22px"><span>Size of home</span><span>Condition</span><span>Leftover debris or garbage</span></div>
+    </div>
+    <div class="ruler rv" id="ruler">
+      <div class="ticks"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10h</span></div>
+      <div class="trow">
+        <div class="lbl"><span>House</span><em>6 to 10 hrs</em></div>
+        <div class="track"><div class="fill house">6h to 10h</div></div>
+      </div>
+      <div class="trow">
+        <div class="lbl"><span>Apartment</span><em>4 to 6 hrs</em></div>
+        <div class="track"><div class="fill apt">4h to 6h</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap note-wrap">
+  <div class="note rv">
+    <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><rect x="6" y="9" width="12" height="8" rx="1"/><circle cx="7" cy="6.5" r=".6"/><circle cx="10" cy="6.5" r=".6"/></svg></div>
+    <div>
+      <h3>One quick favour before we arrive</h3>
+      <p>If your oven has a self-cleaning cycle, please run it before our crew gets there. It helps us get the oven spotless.</p>
+    </div>
+    <a href="tel:5879697327" class="btn btn-sky">Questions? Call us</a>
+  </div>
+</div>
+
+<section class="pm">
+  <div class="wrap">
+    <div class="pm-box rv">
+      <div class="pm-text">
+        <div class="eyebrow"><span>Property Management</span></div>
+        <h2>End-of-month rush? We send teams.</h2>
+        <p>We work with property management companies across Calgary. When leases turn over at month end, we have teams ready to get units cleaned and back on the market.</p>
+        <div class="pm-cal" aria-hidden="true">
+          <i>24</i><i>25</i><i>26</i><i>27</i><i class="hot">28</i><i class="hot">29</i><i class="hot">30</i>
+          <i class="hot">31</i><i class="hot">1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i>
+        </div>
+        <a href="#book" class="btn" style="background:#fff;color:var(--pod)">Request an Estimate</a>
+      </div>
+      <div class="pm-img"><img src="images/pm-team.jpg" alt="Cleaning team arriving at an empty apartment unit"></div>
+    </div>
+  </div>
+</section>
+
+<section class="svc" id="services">
+  <div class="wrap">
+    <div class="svc-head rv">
+      <div>
+        <div class="eyebrow"><span>Our Services</span></div>
+        <h2>More from Two Peas.</h2>
+      </div>
+      <a href="#book" class="btn btn-line" style="color:var(--pod)">Book Appointment</a>
+    </div>
+    <div class="svc-wrap">
+      <div class="rows rv" id="rows">
+        <a class="row on" data-img="0" href="https://www.twopeascleaning.com/move-out-cleaning/"><span class="num">01</span><h3>Move-Out Cleaning</h3><span class="arr">&rarr;</span></a>
+        <a class="row" data-img="1" href="https://www.twopeascleaning.com/house-cleaning/"><span class="num">02</span><h3>House Cleaning</h3><span class="arr">&rarr;</span></a>
+        <a class="row" data-img="2" href="https://www.twopeascleaning.com/office-cleaning/"><span class="num">03</span><h3>Office Cleaning</h3><span class="arr">&rarr;</span></a>
+        <a class="row" data-img="3" href="https://www.twopeascleaning.com/professional-carpet-cleaning/"><span class="num">04</span><h3>Professional Carpet Cleaning</h3><span class="arr">&rarr;</span></a>
+        <a class="row" data-img="4" href="https://www.twopeascleaning.com/airbnb-cleaning/"><span class="num">05</span><h3>Airbnb Cleaning</h3><span class="arr">&rarr;</span></a>
+      </div>
+      <div class="svc-view rv" id="svcView">
+        <img class="on" src="images/kitchen-detail.jpg" alt="Move-out cleaning">
+        <img src="images/svc-house.jpg" alt="House cleaning">
+        <img src="images/svc-office.jpg" alt="Office cleaning">
+        <img src="images/svc-carpet.jpg" alt="Professional carpet cleaning">
+        <img src="images/svc-airbnb.jpg" alt="Airbnb cleaning">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="owners">
+  <div class="wrap owners-grid">
+    <div class="own-photo rv">
+      <div class="peas"><i></i><i></i></div>
+      <img src="images/nicole-kendra.jpg" alt="Nicole and Kendra, owners of Two Peas Cleaning">
+    </div>
+    <div class="rv">
+      <div class="eyebrow"><span>Two Peas In A Pod</span></div>
+      <h2>Meet Nicole and Kendra.</h2>
+      <p>The two faces in our logo are the two peas behind Two Peas Cleaning Company Inc., a Calgary cleaning company.</p>
+      <p>House cleaning, office cleaning, move-outs, carpet cleaning and Airbnb cleaning, seven days a week. Weekend cleaning is available.</p>
+      <div class="own-links">
+        <a href="https://www.twopeascleaning.com/about-us/" class="btn btn-pod">About Us</a>
+        <a href="https://www.twopeascleaning.com/hiring/" class="btn btn-line" style="color:var(--pod)">We're Hiring</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="contact">
+  <div class="wrap">
+    <div class="final-box rv">
+      <div class="final-l">
+        <div class="eyebrow"><span>Book Appointment</span></div>
+        <h2>Moving out soon? Let's get it booked.</h2>
+        <p>Tell us your move-out date and the size of the home. We'll get back to you with an estimate.</p>
+        <div class="btns">
+          <a href="#book" class="btn btn-sky">Request an Estimate</a>
+          <a href="tel:5879697327" class="btn btn-line">587-969-7327</a>
+        </div>
+      </div>
+      <div class="final-r">
+        <div class="ci"><div class="ic"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></div><div><small>Call</small><strong><a href="tel:5879697327">587-969-7327</a></strong></div></div>
+        <div class="ci"><div class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></div><div><small>Email</small><strong><a href="mailto:info@twopeascleaning.com">info@twopeascleaning.com</a></strong></div></div>
+        <div class="ci"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><small>Hours</small><strong>Monday to Sunday, 8 AM to 5 PM</strong></div></div>
+        <div class="ci"><div class="ic"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><small>Service Area</small><strong>Calgary, Alberta</strong></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap f-grid">
+    <div class="f-about">
+      <span class="f-logo"><img src="images/logo.png" alt="Two Peas Cleaning"></span>
+      <p>Move-out, house, office, carpet and Airbnb cleaning in Calgary.</p>
+      <a class="f-seal" href="https://www.bbb.org/" target="_blank" rel="noopener"><img src="images/bbb-seal.png" alt="BBB Accredited Business"></a>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li><a href="https://www.twopeascleaning.com/house-cleaning/">House Cleaning</a></li>
+        <li><a href="https://www.twopeascleaning.com/office-cleaning/">Office Cleaning</a></li>
+        <li><a href="https://www.twopeascleaning.com/move-out-cleaning/">Move-Out Cleaning</a></li>
+        <li><a href="https://www.twopeascleaning.com/professional-carpet-cleaning/">Professional Carpet Cleaning</a></li>
+        <li><a href="https://www.twopeascleaning.com/airbnb-cleaning/">Airbnb Cleaning</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="https://www.twopeascleaning.com/about-us/">About Us</a></li>
+        <li><a href="https://www.twopeascleaning.com/blog/">Blog</a></li>
+        <li><a href="https://www.twopeascleaning.com/hiring/">Hiring</a></li>
+        <li><a href="https://www.twopeascleaning.com/testimonials/">Testimonials</a></li>
+        <li><a href="https://clienthub.getjobber.com/" target="_blank" rel="noopener">Client Login</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Cleaning tips in your inbox</h4>
+      <p>Sign up for house and office cleaning tips and orders.</p>
+      <form class="news" onsubmit="event.preventDefault();this.querySelector('button').textContent='Done';">
+        <input type="email" placeholder="Your email" required><button>Sign Up</button>
+      </form>
+      <div class="socials">
+        <a href="https://www.facebook.com/twopeascleaningcompany" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8V6c0-.9.6-1 1-1h3V1h-4c-3.3 0-4 2.4-4 4v3H7v4h3v11h4V12h3.3l.7-4H14z"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap f-bottom">
+    <span>&copy; 2026 Two Peas Cleaning. <a href="https://www.twopeascleaning.com/terms-policies-guidelines/">Terms, Policies &amp; Guidelines</a></span>
+    <span><a href="https://cleanningdigital.com/" target="_blank" rel="noopener">Design by Cleaning Digital.</a></span>
+  </div>
+</footer>
+
+<script>
+/* checklist */
+const rooms={
+  kitchen:["Cabinets, drawers and doors","Microwave","Range, hood, filter and fan","Oven","Refrigerator","Sink, faucet and countertops","Vacuuming and mopping","Windows and sills","Dusting and cobweb removal","Light fixtures","Baseboards"],
+  bath:["Shower, tub and faucet","Sink and countertops","Toilet","Cabinets and drawers","Fixtures and towel bar","Mopping","Mirror and windows","Baseboards"],
+  living:["Carpets and stairs","Windows and sills","Baseboards","Entryways and hard floors","Dusting and cobwebs","Walls","Fireplace","Door knobs","Electrical outlets","Blinds","Lighting and fixtures","Doors"]
+};
+const list=document.getElementById('clist'),bar=document.getElementById('pbar'),cnt=document.getElementById('pcount');
+let timers=[];
+function show(r){
+  timers.forEach(clearTimeout);timers=[];
+  const items=rooms[r];
+  list.innerHTML=items.map(t=>`<li><span class="box"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span>${t}</li>`).join('');
+  const lis=[...list.children];let d=0;
+  bar.style.width='0';cnt.textContent='0 of '+items.length;
+  lis.forEach((li,i)=>{timers.push(setTimeout(()=>{li.classList.add('done');d++;bar.style.width=(d/items.length*100)+'%';cnt.textContent=d+' of '+items.length+' done';},180+i*130));});
+}
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));t.classList.add('on');show(t.dataset.room);
+}));
+
+/* hotspots */
+const pins=document.querySelectorAll('.pin'),sl=document.querySelectorAll('#spotList li');
+function spot(i){pins.forEach(p=>p.classList.toggle('on',p.dataset.i==i));sl.forEach(l=>l.classList.toggle('on',l.dataset.i==i));}
+pins.forEach(p=>p.addEventListener('click',()=>spot(p.dataset.i)));
+sl.forEach(l=>l.addEventListener('click',()=>spot(l.dataset.i)));
+spot(0);
+
+/* services image swap */
+const rows=document.querySelectorAll('.row'),imgs=document.querySelectorAll('#svcView img');
+rows.forEach(r=>r.addEventListener('mouseenter',()=>{rows.forEach(x=>x.classList.remove('on'));r.classList.add('on');imgs.forEach((im,i)=>im.classList.toggle('on',i==r.dataset.img));}));
+
+/* reveal */
+let started=false;
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');if(e.target.classList.contains('sheet')&&!started){started=true;show('kitchen');}io.unobserve(e.target);}}),{threshold:.15});
+document.querySelectorAll('.rv,#ruler').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
