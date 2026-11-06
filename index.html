@@ -54,17 +54,66 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,249,241,.94);backdro
 .burger span{display:block;height:2px;background:var(--ink);margin:7px 8px;border-radius:2px}
 
 /* ---------- hero ---------- */
-.hero{position:relative;overflow:hidden;background:#fff}
-.hero-bg{position:absolute;inset:0;background:url(images/hero-team.jpg) right center/cover no-repeat}
-.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.96) 34%,rgba(255,255,255,.55) 58%,rgba(255,255,255,0) 78%)}
-.hero-inner{position:relative;padding:86px 0 150px;max-width:640px}
-.hero h1{font-size:clamp(2.6rem,5.6vw,4.7rem);font-weight:800;margin:18px 0 22px}
-.hero h1 em{font-style:normal;color:var(--pod);position:relative;white-space:nowrap}
-.hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.22em;background:var(--pea);opacity:.35;z-index:-1;border-radius:4px}
-.hero p.lead{font-size:1.15rem;color:var(--muted);max-width:520px}
-.hero-times{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
-.chip{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 16px 9px 10px;font-size:.9rem;font-weight:600;box-shadow:0 6px 18px rgba(23,63,29,.06)}
-.chip b{background:var(--pea-soft);color:var(--pod);border-radius:999px;padding:3px 10px;font-size:.82rem}
+.hero{position:relative;overflow:hidden;background:var(--pod-deep);color:#fff;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:
+ radial-gradient(600px 420px at 12% 18%,rgba(124,193,66,.28),transparent 70%),
+ radial-gradient(700px 500px at 88% 85%,rgba(31,162,222,.22),transparent 70%),
+ repeating-linear-gradient(135deg,rgba(255,255,255,.025) 0 2px,transparent 2px 26px)}
+.hero-ghost{position:absolute;left:-1vw;top:40px;font:800 clamp(6rem,17vw,15rem)/.8 'Bricolage Grotesque',sans-serif;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.05);letter-spacing:-.04em;z-index:-1;white-space:nowrap;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center;padding:70px 0 215px}
+.hero-pill{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:7px 16px 7px 8px;font-size:.86rem;font-weight:600;color:#DDEFD3}
+.hero-pill b{background:var(--pea);color:var(--pod-deep);border-radius:999px;padding:3px 10px;font-size:.78rem}
+.hero h1{font-size:clamp(2.6rem,5vw,4.5rem);font-weight:800;margin:22px 0 22px;letter-spacing:-.035em}
+.hero h1 em{font-style:normal;color:var(--pea);position:relative;white-space:nowrap}
+.hero h1 em svg{position:absolute;left:-2%;bottom:-.16em;width:104%;height:.32em;overflow:visible}
+.hero h1 em svg path{fill:none;stroke:var(--sky);stroke-width:6;stroke-linecap:round;stroke-dasharray:320;stroke-dashoffset:320;animation:draw 1.2s .5s forwards ease-out}
+.hero h1 em svg.spark{position:relative;left:auto;bottom:auto;overflow:visible;display:inline-block;width:.42em;height:.42em;vertical-align:top;margin-left:.05em;animation:twinkle 2.4s infinite}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes twinkle{0%,100%{transform:scale(.8) rotate(0);opacity:.7}50%{transform:scale(1.1) rotate(20deg);opacity:1}}
+.hero p.lead{font-size:1.15rem;color:#C5DCBE;max-width:520px}
+.hero-ctas{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+.btn-pea{background:var(--pea);color:var(--pod-deep)}
+.btn-pea:hover{background:#9AD764;transform:translateY(-2px)}
+.btn-ghost{border:2px solid rgba(255,255,255,.35);color:#fff}
+.btn-ghost:hover{border-color:#fff}
+.hero-trust{display:flex;align-items:center;gap:22px;margin-top:34px;flex-wrap:wrap;font-size:.88rem;color:#B9D2B1}
+.hero-trust .g{display:flex;align-items:center;gap:10px}
+.hero-trust .g img{width:26px;height:26px;background:#fff;border-radius:50%;padding:4px}
+.hero-trust .stars{font-size:.95rem}
+.hero-trust .sep{width:1px;height:28px;background:rgba(255,255,255,.18)}
+.hero-trust .bbb{background:#fff;border-radius:8px;padding:4px 8px;height:38px}
+/* collage */
+.collage{position:relative;height:560px}
+.c-main{position:absolute;right:0;top:0;width:86%;height:470px;border-radius:30px 30px 30px 120px;overflow:hidden;box-shadow:0 40px 70px -30px rgba(0,0,0,.6)}
+.c-main img{width:100%;height:100%;object-fit:cover;object-position:30% center;transform:scale(1.04);animation:kenburns 14s ease-in-out infinite alternate}
+@keyframes kenburns{to{transform:scale(1.12) translateX(-2%)}}
+.c-sub{position:absolute;left:0;bottom:0;width:38%;aspect-ratio:3/4;border-radius:22px;overflow:hidden;border:6px solid var(--pod-deep);box-shadow:0 30px 50px -20px rgba(0,0,0,.6);transform:rotate(-4deg)}
+.c-sub img{width:100%;height:100%;object-fit:cover}
+.c-card{position:absolute;left:4%;top:34px;width:250px;background:#fff;color:var(--ink);border-radius:18px;padding:16px 18px;box-shadow:0 24px 50px -18px rgba(0,0,0,.55);animation:floaty 6s ease-in-out infinite}
+.c-card h5{font:700 .95rem 'Bricolage Grotesque',sans-serif;display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.c-card h5 span{font:700 .72rem 'Figtree',sans-serif;color:var(--pod);background:var(--pea-soft);padding:3px 8px;border-radius:999px}
+.c-card ul{list-style:none;display:grid;gap:8px;font-size:.86rem;font-weight:600}
+.c-card li{display:flex;gap:10px;align-items:center;opacity:.35;transition:opacity .3s}
+.c-card li.done{opacity:1}
+.c-card li i{width:18px;height:18px;border-radius:6px;border:2px solid var(--line);display:grid;place-items:center;flex:0 0 18px;transition:.25s}
+.c-card li.done i{background:var(--pod);border-color:var(--pod)}
+.c-card li i::after{content:"";width:7px;height:4px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg) translate(1px,-1px);opacity:0}
+.c-card li.done i::after{opacity:1}
+.c-card .pb{height:6px;background:var(--line);border-radius:9px;margin-top:12px;overflow:hidden}
+.c-card .pb b{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--pea),var(--pod));transition:width .3s}
+.c-time{position:absolute;right:-14px;bottom:56px;background:var(--sky);color:#fff;border-radius:16px;padding:14px 18px;box-shadow:0 24px 40px -16px rgba(31,162,222,.7);animation:floaty 7s 1s ease-in-out infinite}
+.c-time small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;opacity:.85;font-weight:700}
+.c-time strong{font:800 1.05rem 'Bricolage Grotesque',sans-serif;display:block;line-height:1.35}
+.pea-ball{position:absolute;border-radius:50%;background:radial-gradient(circle at 35% 30%,#C9EE9F,var(--pea) 55%,#3F8A22);box-shadow:0 10px 20px rgba(0,0,0,.35)}
+.pb1{width:44px;height:44px;right:30%;top:-18px;animation:floaty 5s ease-in-out infinite}
+.pb2{width:28px;height:28px;left:40%;bottom:14px;animation:floaty 6s .6s ease-in-out infinite}
+.pb3{width:18px;height:18px;right:6%;top:52%;animation:floaty 4.5s .3s ease-in-out infinite}
+@keyframes floaty{0%,100%{translate:0 0}50%{translate:0 -12px}}
+/* ticker */
+.ticker{position:absolute;left:0;right:0;bottom:118px;background:var(--pea);color:var(--pod-deep);transform:rotate(-1.2deg);padding:12px 0;overflow:hidden;font:700 1.02rem 'Bricolage Grotesque',sans-serif;white-space:nowrap;z-index:1}
+.ticker div{display:inline-flex;gap:34px;animation:tick 30s linear infinite;padding-left:34px}
+.ticker span::after{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--pod-deep);margin-left:34px;vertical-align:middle}
+@keyframes tick{to{transform:translateX(-50%)}}
 
 /* booking bar */
 .booking{position:relative;z-index:5;margin-top:-92px}
@@ -265,6 +314,7 @@ footer a:hover{color:#fff}
   .proof-row{grid-template-columns:1fr 1fr}
   .proof-item:nth-child(2){border-right:0}
   .proof-item:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .hero-grid{grid-template-columns:1fr;gap:40px}
   .check-grid,.time-grid,.owners-grid,.svc-wrap{grid-template-columns:1fr;gap:44px}
   .check-side{position:static}
   .spot-stage,.pm-box,.final-box{grid-template-columns:1fr}
@@ -277,8 +327,8 @@ footer a:hover{color:#fff}
   .nav-phone,.topbar .tb-left{display:none}
   .logo img{height:58px}
   .nav-cta .btn-pod{display:none}
-  .hero-bg{background-position:72% center;opacity:.35}
-  .hero-inner{padding:56px 0 120px}
+  .collage{height:440px}.c-main{height:340px;width:92%}.c-card{width:210px;left:0;top:250px;padding:12px 14px}.c-sub{display:none}.c-time{right:0;bottom:auto;top:-10px}
+  .hero-grid{padding:44px 0 170px}
   .booking form{grid-template-columns:1fr}
   .field{border-right:0}
   .list{grid-template-columns:1fr}
@@ -327,18 +377,35 @@ footer a:hover{color:#fff}
 </header>
 
 <section class="hero">
-  <div class="hero-bg"></div>
-  <div class="wrap">
-    <div class="hero-inner">
-      <div class="eyebrow"><span>Move-Out Cleaning in Calgary</span></div>
-      <h1>Hand back the keys to a <em>spotless</em> home.</h1>
+  <div class="hero-ghost">Two Peas</div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="hero-pill"><b>Calgary</b> Move-out cleaning, open 7 days</div>
+      <h1>Hand back the keys to a <em>spotless<svg viewBox="0 0 300 20" preserveAspectRatio="none"><path d="M4 14 C 80 4, 200 2, 296 10"/></svg><svg class="spark" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#1FA2DE"/></svg></em> home.</h1>
       <p class="lead">Move-out, property management and detailed residential cleaning. We pull out the fridge and stove, clean the oven inside and leave every room ready for the next walkthrough.</p>
-      <div class="hero-times">
-        <div class="chip"><b>House</b> About 6 to 10 hours</div>
-        <div class="chip"><b>Apartment</b> About 4 to 6 hours</div>
+      <div class="hero-ctas">
+        <a href="#book" class="btn btn-pea">Request an Estimate &rarr;</a>
+        <a href="tel:5879697327" class="btn btn-ghost">Call 587-969-7327</a>
+      </div>
+      <div class="hero-trust">
+        <div class="g"><img src="images/google.svg" alt="Google"><div><span class="stars">★★★★★</span><br>5-star Google reviews</div></div>
+        <span class="sep"></span>
+        <img class="bbb" src="images/bbb-seal.png" alt="BBB Accredited Business">
       </div>
     </div>
+    <div class="collage">
+      <span class="pea-ball pb1"></span><span class="pea-ball pb2"></span><span class="pea-ball pb3"></span>
+      <div class="c-main"><img src="images/kitchen-detail.jpg" alt="Kitchen cleaned during a Two Peas move-out clean"></div>
+      <div class="c-sub"><img src="images/checklist-bath.jpg" alt="Bathroom mirror being cleaned"></div>
+      <div class="c-card">
+        <h5>Move-out checklist <span id="hcCount">0/5</span></h5>
+        <ul id="hcList"><li><i></i>Fridge, inside and out</li><li><i></i>Oven cleaned inside</li><li><i></i>Behind fridge and stove</li><li><i></i>Cabinets and drawers</li><li><i></i>Baseboards and walls</li></ul>
+        <div class="pb"><b id="hcBar"></b></div>
+      </div>
+      <div class="c-time"><small>Typical time</small><strong>House 6 to 10 hrs</strong><strong>Apartment 4 to 6 hrs</strong></div>
+    </div>
   </div>
+  <div class="ticker"><div><span>Move-Out Cleaning</span><span>Property Management</span><span>House Cleaning</span><span>Office Cleaning</span><span>Professional Carpet Cleaning</span><span>Airbnb Cleaning</span><span>Weekend Cleaning Available</span><span>Move-Out Cleaning</span><span>Property Management</span><span>House Cleaning</span><span>Office Cleaning</span><span>Professional Carpet Cleaning</span><span>Airbnb Cleaning</span><span>Weekend Cleaning Available</span></div></div>
 </section>
 
 <div class="wrap booking" id="book">
@@ -610,6 +677,11 @@ footer a:hover{color:#fff}
 </footer>
 
 <script>
+/* hero checklist card */
+(function(){const li=[...document.querySelectorAll('#hcList li')],c=document.getElementById('hcCount'),b=document.getElementById('hcBar');
+function run(){li.forEach(l=>l.classList.remove('done'));b.style.width='0';c.textContent='0/5';
+li.forEach((l,i)=>setTimeout(()=>{l.classList.add('done');b.style.width=((i+1)/li.length*100)+'%';c.textContent=(i+1)+'/5';},700+i*650));}
+run();setInterval(run,7000);})();
 /* checklist */
 const rooms={
   kitchen:["Cabinets, drawers and doors","Microwave","Range, hood, filter and fan","Oven","Refrigerator","Sink, faucet and countertops","Vacuuming and mopping","Windows and sills","Dusting and cobweb removal","Light fixtures","Baseboards"],
